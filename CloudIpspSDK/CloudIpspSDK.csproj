@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37667A0D-9A2B-47A0-9FD5-C7FD0327A774}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CloudIpspSDK</RootNamespace>
+    <AssemblyName>CloudIpspSDK</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\9.0.1\lib\netstandard1.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Checkout\Settlement.cs" />
+    <Compile Include="Checkout\Subscription.cs" />
+    <Compile Include="Checkout\Token.cs" />
+    <Compile Include="Checkout\Url.cs" />
+    <Compile Include="Checkout\Verification.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="Models\AdditionalInfo.cs" />
+    <Compile Include="Models\BankAccount.cs" />
+    <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\Checkout.cs" />
+    <Compile Include="Models\Merchant.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\P2pcredit.cs" />
+    <Compile Include="Models\Pcidss.cs" />
+    <Compile Include="Models\ReccuringData.cs" />
+    <Compile Include="Models\Receiver.cs" />
+    <Compile Include="Models\Recurring.cs" />
+    <Compile Include="Models\RequestV2.cs" />
+    <Compile Include="Models\Response.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Order\Atol.cs" />
+    <Compile Include="Order\Capture.cs" />
+    <Compile Include="Order\Reverse.cs" />
+    <Compile Include="Order\Status.cs" />
+    <Compile Include="Order\TransactionList.cs" />
+    <Compile Include="P2pcredit\P2pcredit.cs" />
+    <Compile Include="Payment\Pcidss.cs" />
+    <Compile Include="Payment\Rectoken.cs" />
+    <Compile Include="Payment\Reports.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Response\Response.cs" />
+    <Compile Include="Utils\JsonFormatter.cs" />
+    <Compile Include="Utils\QueryParameters.cs" />
+    <Compile Include="Utils\RequiredParams.cs" />
+    <Compile Include="Utils\Signature.cs" />
+    <Compile Include="Utils\XmlFormatter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>
