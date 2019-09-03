@@ -12,7 +12,10 @@ A payment service provider (PSP) offers shops online services for accepting elec
 
 SDK availble on NuGet.
 
+## Requirements
+
 Fondy account - [Register here](https://portal.fondy.eu/mportal/#/account/registration)
+
 Newtonsoft.json (JSON.NET)
 
 
@@ -20,18 +23,16 @@ Newtonsoft.json (JSON.NET)
 ```csharp
 Config.MerchantId = 1000;
 Config.SecretKey = "test";
-var req = new CheckoutRequest
-    {
-        order_id = Request.Form["order_id"],
-        amount = amount * 100,
-        order_desc = "checkout json demo",
-        currency = "RUB"  
-    };
+var req = new CheckoutRequest {
+ order_id = Request.Form["order_id"],
+  amount = amount * 100,
+  order_desc = "checkout json demo",
+  currency = "RUB"
+};
 var resp = new Url().Post(req);
-if (resp.Error == null)
-    {
-		DataUri = resp.checkout_url;
-    }
+if (resp.Error == null) {
+ string url = resp.checkout_url;
+}
 ```
 # Api
 
