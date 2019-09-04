@@ -1,4 +1,4 @@
-# IPSP PHP-SDK-v2
+# IPSP C# SDK
 
 <p align="center">
   <img width="200" height="200" src="https://avatars0.githubusercontent.com/u/15383021?s=200&v=4">
