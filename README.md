@@ -27,7 +27,7 @@ var req = new CheckoutRequest {
  order_id = Request.Form["order_id"],
   amount = amount * 100,
   order_desc = "checkout json demo",
-  currency = "RUB"
+  currency = "EUR"
 };
 var resp = new Url().Post(req);
 if (resp.Error == null) {
