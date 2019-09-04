@@ -24,7 +24,7 @@ Newtonsoft.json (JSON.NET)
 Config.MerchantId = 1000;
 Config.SecretKey = "test";
 var req = new CheckoutRequest {
- order_id = Request.Form["order_id"],
+ order_id = "order_id",
   amount = amount * 100,
   order_desc = "checkout json demo",
   currency = "EUR"
