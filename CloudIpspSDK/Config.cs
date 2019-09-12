@@ -24,8 +24,8 @@
 
         public static string ContentType
         {
-            get => contentType;
-            set => contentType = value;
+            get { return contentType; }
+            set { contentType = value; }
         }
 
         /// <summary>
