@@ -11,7 +11,7 @@ namespace CloudIpspSDK
     {
         private static int _statusCode;
         private static string _response;
-        private static string _agen = "CloudIpsp-c-SDK";
+        private static string _agent = "CloudIpsp-c-SDK";
         private static string _method = "POST";
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace CloudIpspSDK
 
             HttpWebRequest conn = WebRequest.CreateHttp(new Uri(uriString)) as HttpWebRequest;
             conn.ContentType = GetContentTypeHeader(Config.ContentType);
-            conn.UserAgent = _agen;
+            conn.UserAgent = _agent;
             conn.Method = _method;
             byte[] requestData = Encoding.UTF8.GetBytes(data);
             var resultRequest = conn.BeginGetRequestStream(null, null);
