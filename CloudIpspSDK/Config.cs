@@ -13,7 +13,7 @@
         public static string SecretKey { get; set; }
 
         /// <summary>
-        /// Merchant Secret Key
+        /// Merchant Credit Key
         /// </summary>
         public static string CreditKey { get; set; }
 
