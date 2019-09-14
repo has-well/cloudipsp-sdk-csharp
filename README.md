@@ -21,7 +21,7 @@ Newtonsoft.json (JSON.NET)
 
 ## Simple Start
 ```csharp
-Config.MerchantId = 1000;
+Config.MerchantId = 1396424;
 Config.SecretKey = "test";
 var req = new CheckoutRequest {
   amount = 100000,
