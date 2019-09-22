@@ -21,9 +21,14 @@ Newtonsoft.json (JSON.NET)
 
 ## Simple Start
 ```csharp
+using CloudIpspSDK;
+using CloudIpspSDK.Checkout;
+
 Config.MerchantId = 1396424;
 Config.SecretKey = "test";
+
 var req = new CheckoutRequest {
+  order_id = Guid.NewGuid().ToString("N"),
   amount = 100000,
   order_desc = "checkout json demo",
   currency = "EUR"
