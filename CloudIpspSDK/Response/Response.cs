@@ -156,7 +156,7 @@ namespace CloudIpspSDK.Response
         /// <returns></returns>
         private bool ISv2Resp(ResponseModel resp)
         {
-            return (Config.Protocol == "2.0" && resp.data != null);
+            return !string.IsNullOrEmpty(resp.data) && resp.version == "2.0";
         }
     }
 }
