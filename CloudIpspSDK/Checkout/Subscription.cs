@@ -13,6 +13,8 @@ namespace CloudIpspSDK.Checkout
         public SubscriptionResponse Post(SubscriptionRequest req)
         {
             SubscriptionResponse response;
+            string defaultProtocol = Config.Protocol;
+            string defaultContentType = Config.ContentType;
             Config.ContentType = "json";
             Config.Protocol = "2.0";
             req.merchant_id = Config.MerchantId;
@@ -30,6 +32,8 @@ namespace CloudIpspSDK.Checkout
 
             if (response.data != null && Config.Protocol == "2.0")
             {
+                Config.Protocol = defaultProtocol;
+                Config.ContentType = defaultContentType;
                 return JsonFormatter.ConvertFromJson<SubscriptionResponse>(response.data, true, "order");
             }
 

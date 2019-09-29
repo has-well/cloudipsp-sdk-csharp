@@ -20,15 +20,14 @@ namespace CloudIpspSDK.Models
     {
         [JsonProperty(PropertyName = "version")]
         public string version { get; set; }
-
-
+        
         [JsonIgnore] private string Data { get; set; }
 
         [JsonProperty(PropertyName = "data")]
         public string data
         {
             get { return Data; }
-            set { Data = Signature.Base64Decode(value); }
+            set { Data = !string.IsNullOrEmpty(value) ? Signature.Base64Decode(value) : value; }
         }
 
         [JsonProperty(PropertyName = "signature")]
