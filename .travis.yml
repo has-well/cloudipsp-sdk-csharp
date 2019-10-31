@@ -1,4 +1,4 @@
-  language: csharp
+language: csharp
 solution: "./CloudIpspSDK.sln"
 install:
     - travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./Fibonacci/Fibonacci.sln
