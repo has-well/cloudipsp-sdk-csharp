@@ -1,6 +1,9 @@
 language: csharp
 solution: "./CloudIpspSDK.sln"
+mono: none
+dotnet: 2.2.100
 install:
+    - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
     - travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./CloudIpspSDK.sln
 script:
     - xbuild ./CloudIpspSDK.sln
