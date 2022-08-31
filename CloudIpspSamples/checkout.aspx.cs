@@ -87,7 +87,7 @@ namespace CloudIpspSamples
                 order_id = Request.Form["order_id"],
                 amount = amount * 100,
                 order_desc = "checkout json demo",
-                currency = "RUB",
+                currency = "UAH",
                 merchant_data = mdata,
                 response_url = Request.Url.Scheme + "://" + Request.Url.Authority + "/response.aspx",
                 server_callback_url = "https://callback.test"

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
 using CloudIpspSDK;
 using CloudIpspSDK.Checkout;
 using CloudIpspSDK.Models;

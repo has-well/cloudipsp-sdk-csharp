@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using CloudIpspSDK.Order;
 using CloudIpspSDK.Payment;
 
 namespace CloudIpspSamples

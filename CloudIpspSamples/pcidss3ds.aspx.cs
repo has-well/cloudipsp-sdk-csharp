@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text;
 using System.Web.UI.WebControls;
 using CloudIpspSDK.Payment;
-using CloudIpspSDK.Response;
 
 namespace CloudIpspSamples
 {

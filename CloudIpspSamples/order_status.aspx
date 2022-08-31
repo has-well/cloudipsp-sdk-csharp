@@ -1,5 +1,4 @@
 ﻿<%@ Page Async="true" Language="C#" AutoEventWireup="true" CodeBehind="order_status.aspx.cs" Inherits="CloudIpspSamples.OrderStatus" %>
-<%@ Import Namespace="CloudIpspSDK.Models" %>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>

@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Specialized;
 using CloudIpspSDK.Checkout;
-using CloudIpspSDK.Models;
 using CloudIpspSDK.Order;
 using CloudIpspSDK.Response;
-using Newtonsoft.Json;
 
 namespace CloudIpspSamples
 {
