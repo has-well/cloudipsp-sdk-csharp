@@ -43,6 +43,10 @@
                     <td>Order Id</td>
                     <td><% Response.Write(P2PResp.order_id); %></td>
                 </tr>
+                <tr>
+                     <td>Additional Data</td>
+                     <td><% Response.Write(P2PResp.additional_info); %></td>
+                 </tr>
             </table>
             <h2>Order Response data</h2>
             <table class="table table-sm">
@@ -94,6 +98,19 @@
                                                                                                    }
                                                                                                %>"/>
                 </div>
+                <div class="form-group">
+                                    <label for="reservation_data">Reservation Data:</label>
+                                    <input id="reservation_data" class="form-control" type="text" name="reservation_data" value="<%
+                                                                                                                   if (Request.Form["reservation_data"] == null)
+                                                                                                                   {
+                                                                                                                       Response.Write("eyJyZWNlaXZlcl9pbm4iOiAxMDAwfQ==");
+                                                                                                                   }
+                                                                                                                   else
+                                                                                                                   {
+                                                                                                                       Response.Write(Request.Form["reservation_data"]);
+                                                                                                                   }
+                                                                                                               %>"/>
+                                </div>
             </fieldset>
             <asp:Button ID="btnSubmit" CssClass="btn btn-primary" Text="Submit" runat="server"/>
         </form>

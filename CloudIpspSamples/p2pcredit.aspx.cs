@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Specialized;
 using CloudIpspSDK;
 using CloudIpspSDK.Checkout;
@@ -33,11 +34,15 @@ namespace CloudIpspSamples
                 }
                 else
                 {
+                    string reservationDataJson = "{\"receiver_inn\":\"123456\"}";
+                    byte[] byteArray = Encoding.UTF8.GetBytes(reservationDataJson);
+                    string reservationDataString = Convert.ToBase64String(byteArray);
                     ResponeOrder = resp.order_id;
                     var p2PcreditReq = new P2PcreditRequest()
                     {
                         order_id = Guid.NewGuid().ToString(),
                         currency = "USD",
+                        reservation_data = reservationDataString,
                         receiver_rectoken = resp.rectoken,
                         amount = 10000,
                         order_desc = "request desc"
@@ -70,6 +75,7 @@ namespace CloudIpspSamples
                 order_id = Request.Form["order_id"],
                 amount = amount * 100,
                 order_desc = "checkout p2pcredit demo",
+                reservation_data = Request.Form["reservation_data"],
                 currency = "USD",
                 required_rectoken = "Y",
                 response_url = Request.Url.Scheme + "://" + Request.Url.Authority + "/p2pcredit.aspx"

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CloudIpspSamples {
-    
-    
-    public partial class P2pCreditSample {
-        
+namespace CloudIpspSamples
+{
+
+
+    public partial class P2pCreditSample
+    {
+
         /// <summary>
         /// btnSubmit control.
         /// </summary>

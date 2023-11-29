@@ -43,6 +43,9 @@ namespace CloudIpspSDK.Models
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "receiver_card_number")]
         public string receiver_card_number { get; set; }
+        
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "reservation_data")]
+        public string reservation_data { get; set; }
     }
 
     public class P2PcreditResponseModel : ResponseV2
@@ -100,6 +103,9 @@ namespace CloudIpspSDK.Models
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "signature")]
         public new string signature { get; set; }
+        
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "additional_info")]
+        public string additional_info { get; set; }
 
         [JsonIgnore] [XmlIgnore] public ClientException Error { get; set; }
     }
