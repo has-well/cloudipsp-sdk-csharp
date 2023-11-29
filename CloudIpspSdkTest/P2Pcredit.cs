@@ -29,14 +29,14 @@ namespace CloudIpspSdkTest
                 order_id = oID,
                 amount = 10000,
                 order_desc = "checkout tests",
-                currency = "EUR",
+                currency = "UAH",
                 receiver_card_number = card_number
             };
             var resp = new P2Pcredit().Post(req);
 
             Assert.IsNotNull(resp);
             Assert.AreEqual(oID, resp.order_id);
-            Assert.AreEqual("declined", resp.order_status);
+            Assert.AreEqual("approved", resp.order_status);
         }
     }
 }
